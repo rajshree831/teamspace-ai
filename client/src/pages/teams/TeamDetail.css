@@ -1,0 +1,74 @@
+.back-link {
+  display: inline-block;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: var(--space-md);
+}
+.back-link:hover {
+  color: var(--color-primary);
+}
+
+.team-header-card {
+  margin-bottom: var(--space-md);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.section-subtitle {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.success-text {
+  color: var(--color-success-text);
+  background: var(--color-success-bg);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: var(--space-md);
+}
+
+.member-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0 0 0;
+}
+
+.member-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.member-item:last-child {
+  border-bottom: none;
+}
+
+.member-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.member-email {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 2px 0 0 0;
+}
+
+.add-member-form {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.add-member-form .input-field {
+  margin-bottom: 0;
+  flex: 1;
+}

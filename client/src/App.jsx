@@ -5,6 +5,9 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
+import MyTeams from "./pages/teams/MyTeams";
+import CreateTeam from "./pages/teams/CreateTeam";
+import TeamDetail from "./pages/teams/TeamDetail";
 
 function App() {
   return (
@@ -21,6 +24,32 @@ function App() {
             element={
               <ProtectedRoute>
                 <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Protected team routes */}
+          <Route
+            path="/teams"
+            element={
+              <ProtectedRoute>
+                <MyTeams />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/teams/create"
+            element={
+              <ProtectedRoute>
+                <CreateTeam />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/teams/:id"
+            element={
+              <ProtectedRoute>
+                <TeamDetail />
               </ProtectedRoute>
             }
           />

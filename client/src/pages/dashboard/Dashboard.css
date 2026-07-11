@@ -1,0 +1,41 @@
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+.btn-secondary:hover {
+  background: var(--color-bg);
+}
+
+.dashboard-team-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0;
+}
+
+.dashboard-team-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 14px;
+}
+.dashboard-team-link:hover {
+  color: var(--color-primary);
+}
+
+.view-all-link {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-size: 14px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.view-all-link:hover {
+  text-decoration: underline;
+}
