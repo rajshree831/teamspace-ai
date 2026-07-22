@@ -7,7 +7,6 @@ const authRoutes = require('./src/routes/authRoutes');
 const teamRoutes = require('./src/routes/teamRoutes');
 
 
-
 const app = express();
 
 // Connect to MongoDB
@@ -20,6 +19,7 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/teams', teamRoutes);
+app.use('/api/tasks', require('./src/routes/taskRoutes'));
 
 
 

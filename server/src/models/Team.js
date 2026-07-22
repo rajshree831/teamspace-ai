@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 // Sub-schema for a single team membership.
 // We don't give this its own _id lookup pattern since it's
 // always accessed through the parent Team document.
