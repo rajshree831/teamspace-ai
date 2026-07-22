@@ -88,10 +88,9 @@ const TeamDetail = () => {
           {isAdmin && <span className="badge badge-admin">Admin</span>}
         </div>
 
-        {/* Placeholder — Kanban board feature comes later */}
-        <button className="btn btn-primary" disabled title="Coming soon">
-          Go to Kanban Board (Coming Soon)
-        </button>
+        <Link to={`/teams/${team._id}/board`} className="btn btn-primary">
+  Go to Kanban Board
+</Link>
       </div>
 
       <div className="card">

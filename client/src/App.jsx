@@ -8,6 +8,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import MyTeams from "./pages/teams/MyTeams";
 import CreateTeam from "./pages/teams/CreateTeam";
 import TeamDetail from "./pages/teams/TeamDetail";
+import KanbanBoard from "./pages/kanban/KanbanBoard";
 
 function App() {
   return (
@@ -53,6 +54,14 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+  path="/teams/:id/board"
+  element={
+    <ProtectedRoute>
+      <KanbanBoard />
+    </ProtectedRoute>
+  }
+/>
 
           {/* Default route: redirect root ("/") to login */}
           <Route path="/" element={<Navigate to="/login" />} />

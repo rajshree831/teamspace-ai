@@ -1,0 +1,53 @@
+/* client/src/pages/kanban/KanbanBoard.css */
+
+.kanban-board {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+}
+
+.kanban-column {
+  flex: 1;
+  background: #f4f5f7;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 400px;
+}
+
+.kanban-column-title {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.kanban-count {
+  color: #666;
+  font-weight: normal;
+}
+
+.kanban-status-message {
+  text-align: center;
+  padding: 40px;
+}
+
+.kanban-error {
+  color: red;
+}
+
+.kanban-empty {
+  color: #999;
+  font-size: 13px;
+  font-style: italic;
+}
+.kanban-header {
+  padding: 24px 24px 0 24px;
+}
+
+.btn-primary {
+  padding: 8px 14px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
