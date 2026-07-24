@@ -5,6 +5,7 @@ require('dotenv').config();
 const connectDB = require('./src/config/db');
 const authRoutes = require('./src/routes/authRoutes');
 const teamRoutes = require('./src/routes/teamRoutes');
+const meetingRoutes=require('./src/routes/meetingRoutes');
 
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/teams', teamRoutes);
 app.use('/api/tasks', require('./src/routes/taskRoutes'));
+app.use('/api/meetings', meetingRoutes);
 
 
 

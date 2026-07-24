@@ -1,15 +1,18 @@
 const mongoose = require('mongoose');
 const Team = require('../models/Team');
 
-// Middleware: checks if req.user belongs to the team in :id (any role).
-// Used for routes where any team member (not just admins) should have access.
+// Middleware: checks if req.user belongs to the team (any role).
+// Accepts the team id from params.id (existing task routes),
+// params.teamId, or body.team (new meeting routes) — checked in that order.
 const isMember = async (req, res, next) => {
   try {
-    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+    const teamId = req.params.id || req.params.teamId || req.body.team;
+
+    if (!teamId || !mongoose.Types.ObjectId.isValid(teamId)) {
       return res.status(400).json({ message: 'Invalid team ID' });
     }
 
-    const team = await Team.findById(req.params.id);
+    const team = await Team.findById(teamId);
 
     if (!team) {
       return res.status(404).json({ message: 'Team not found' });
